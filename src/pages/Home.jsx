@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  // console.log(products);
 
   useEffect(() => {
     fetch("products.json")
@@ -11,8 +12,8 @@ const Home = () => {
       .then((data) => setProducts(data));
   }, []);
 
-  const state  = useSelector((state) => state);
-  console.log(state);
+  const state = useSelector((state) => state);
+  // console.log(state);
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 justify-items-center">
